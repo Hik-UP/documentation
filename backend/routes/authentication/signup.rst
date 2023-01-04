@@ -34,9 +34,7 @@ Response Body
 +---------------+-----------+---------------------------------------------------------------+
 | Parameter     | Type      | Description                                                   |
 +===============+===========+===============================================================+
-| userId        | String    | The ID that uniquely identifies this user.                    |
-+---------------+-----------+---------------------------------------------------------------+
-| token         | String    | The access token needed to authenticate your requests.        |
+| message       | String    | A message confirming that the user was created.               |
 +---------------+-----------+---------------------------------------------------------------+
 
 Response Codes
@@ -45,14 +43,9 @@ Response Codes
 +---------------------------+---------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                       |
 +===========================+===============================================================+
-| 200 OK                    | User login succeed.                                           |
+| 200 OK                    | User creation succeed.                                        |
 +---------------------------+---------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token.    |
-|                           | The OAuth token is not valid.                                 |
-|                           | Email address is incorrect.                                   |
-|                           | Password is incorrect.                                        |
-+---------------------------+---------------------------------------------------------------+
-| 500 Internal Server Error |                                                               |
+| 500 Internal Server Error | An user with this email address already exist in our database.|
 +---------------------------+---------------------------------------------------------------+
 
 Example Request
@@ -60,8 +53,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/auth/login' \
-    --header 'Content-Type: application/json'                                                       \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/auth/signup'    \
+    --header 'Content-Type: application/json'                                                           \
     --data-raw '{
         "user": {
             "email": "xxxx@xxxx.xxx",
@@ -75,6 +68,5 @@ Example Response
 .. code-block:: console
 
     {
-        "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "message": "Created"
     }
