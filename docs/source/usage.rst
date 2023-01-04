@@ -6,7 +6,7 @@ Backend
 Installation
 ------------
 
-Install Hik'UP backend from Git:
+Install Backend from Git:
 
 .. code-block:: console
 
