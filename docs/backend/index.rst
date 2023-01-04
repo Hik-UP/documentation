@@ -11,5 +11,7 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 4
+   :caption: Development:
 
    development/index
