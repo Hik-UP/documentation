@@ -7,9 +7,6 @@ To Do
 
    This project is under active development.
 
-Contents
---------
-
 .. toctree::
    :maxdepth: 10
 
