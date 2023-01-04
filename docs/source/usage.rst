@@ -6,17 +6,21 @@ Backend
 Installation
 ------------
 
-To install the backend, first clone it using git command:
+Install Hik'UP backend from Git:
 
 .. code-block:: console
 
    git@github.com:Hik-UP/backend.git
-
-Next, go into cloned folder:
-
    cd backend
 
-Creating recipes
-----------------
+.. _building:
 
-TEST
+Building Backend
+------------
+
+
+You can build Backend with the script:
+
+.. code-block:: console
+
+   ./server.sh install
