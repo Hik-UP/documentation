@@ -10,17 +10,27 @@ Install Backend from Git:
 
 .. code-block:: console
 
-   git@github.com:Hik-UP/backend.git
+   git clone git@github.com:Hik-UP/backend.git
    cd backend
 
 .. _building:
 
-Building Backend
+Building
 ------------
-
 
 You can build Backend with the script:
 
 .. code-block:: console
 
    ./server.sh install
+
+..uninstalling:
+
+Uninstalling
+------------
+
+You can uninstall Backend with the script:
+
+.. code-block:: console
+
+   ./server.sh uninstall
