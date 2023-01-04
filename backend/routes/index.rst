@@ -6,3 +6,4 @@ Routes
 .. toctree::
 
    authentication/index
+   poi/index
