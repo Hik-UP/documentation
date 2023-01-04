@@ -1,4 +1,4 @@
-Welcome to Hik'UP's documentation!
+Backend
 ===================================
 
 To Do
@@ -11,7 +11,6 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 4
-   :caption: Development:
+   :maxdepth: 10
 
    development/index
