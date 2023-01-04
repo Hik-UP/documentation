@@ -24,7 +24,7 @@ You can build Backend with the script:
 
    ./server.sh install
 
-..uninstalling:
+.. _uninstalling:
 
 Uninstalling
 ------------
