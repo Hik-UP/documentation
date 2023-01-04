@@ -5,4 +5,7 @@ Development
 
 .. toctree::
 
-   development
+   prerequirements
+   installation
+   building
+   uninstalling
