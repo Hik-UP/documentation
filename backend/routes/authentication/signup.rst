@@ -47,7 +47,7 @@ Response Codes
 +===========================+======================================================================+
 | 201 Created               | User creation succeed.                                               |
 +---------------------------+----------------------------------------------------------------------+
-| 500 Internal Server Error | An user with this username or email address already exist<br />      |
+| 500 Internal Server Error | An user with this username or email address already exist            |
 |                           | in our database.                                                     |
 +---------------------------+----------------------------------------------------------------------+
 

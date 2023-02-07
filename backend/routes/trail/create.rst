@@ -3,17 +3,18 @@
 Create
 ============
 
-Create a new PointOfInterest.
+Create a new Trail.
 
 Authentication
 ------------
 
 Requires an access token.
+User need to be a member of the ADMIN group.
 
 URL
 ------------
 
-:code:`POST https://pro-hikup.westeurope.cloudapp.azure.com/api/poi/create`
+:code:`POST https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/create`
 
 Request Body
 ------------
@@ -29,13 +30,29 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | trail         | Object    | Yes           | Object containing Trail data.                        |
 +---------------+-----------+---------------+------------------------------------------------------+
-| id            | String    | Yes           | Trail unique identifier.                             |
+| name          | String    | Yes           | Trail name.                                          |
 +---------------+-----------+---------------+------------------------------------------------------+
-| poi           | Object    | Yes           | Object containing PointOfInterest data.              |
+| description   | String    | Yes           | Trail description.                                   |
 +---------------+-----------+---------------+------------------------------------------------------+
-| latitude      | Double    | Yes           | PointOfInterest latitude coordinate.                 |
+| pictures      | String[]  | Yes           | Array of strings containing Trail pictures (base64). |
 +---------------+-----------+---------------+------------------------------------------------------+
-| longitude     | Double    | Yes           | PointOfInterest longitude coordinate.                |
+| latitude      | Double    | Yes           | Trail latitude coordinate.                           |
++---------------+-----------+---------------+------------------------------------------------------+
+| longitude     | Double    | Yes           | Trail longitude coordinate.                          |
++---------------+-----------+---------------+------------------------------------------------------+
+| difficulty    | Int       | Yes           | Trail difficulty.                                    |
++---------------+-----------+---------------+------------------------------------------------------+
+| duration      | Int       | Yes           | Trail duration (minutes).                            |
++---------------+-----------+---------------+------------------------------------------------------+
+| distance      | Int       | Yes           | Trail distance (meters).                             |
++---------------+-----------+---------------+------------------------------------------------------+
+| uphill        | Int       | Yes           | Trail uphill (meters).                               |
++---------------+-----------+---------------+------------------------------------------------------+
+| downhill      | Int       | Yes           | Trail downhill (meters).                             |
++---------------+-----------+---------------+------------------------------------------------------+
+| labels        | String    | Yes           | Trail labels.                                        |
++---------------+-----------+---------------+------------------------------------------------------+
+| geoJSON       | String    | Yes           | Trail geoJSON.                                       |
 +---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -44,7 +61,7 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | Parameter     | Type      | Description                                                          |
 +===============+===========+======================================================================+
-| message       | String    | A message confirming that the PointOfInterest was created.           |
+| message       | String    | A message confirming that the Trail was created.                     |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -53,7 +70,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 201 Created               | PointOfInterest creation succeed.                                    |
+| 201 Created               | Trail creation succeed.                                              |
 +---------------------------+----------------------------------------------------------------------+
 | 401 Unauthorized          | The Authorization header must specify a user access token.           |
 |                           | The OAuth token is not valid.                                        |
@@ -68,19 +85,26 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/poi/create' \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                          \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/create'   \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "roles": ["XXXX"]
         },
         "trail": {
-            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        },
-        "poi": {
-            "latitude": 00.000000000000,
-            "longitude": 0.0000000000000
+            "name": "xxxxxxxxxxx",
+            "description": "xxxx",
+            "pictures": ["xxxxx"],
+            "latitude": 48.862725,
+            "longitude": 2.287592,
+            "difficulty": 0,
+            "duration": 0,
+            "distance": 0,
+            "uphill": 0,
+            "downhill": 0,
+            "labels": ["xxxxxxx"],
+            "geoJSON": "xxxxxxxx"
         }
     }'
 
