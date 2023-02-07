@@ -1,9 +1,8 @@
 .. _development:
 
-Development
+Middlewares
 ===================================
 
 .. toctree::
 
-   getting_started/index
-   middlewares/index
+   rolesCheck
