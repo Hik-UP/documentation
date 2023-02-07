@@ -79,6 +79,9 @@ Example Response
 .. code-block:: console
 
     {
-        "userId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-        "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "user": {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "roles": ["XXXXX"],
+            "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
     }
