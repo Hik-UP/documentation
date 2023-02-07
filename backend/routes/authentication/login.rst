@@ -51,10 +51,10 @@ Response Codes
 +===========================+======================================================================+
 | 200 OK                    | User login succeed.                                                  |
 +---------------------------+----------------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token.           |
-|                           | The OAuth token is not valid.                                        |
-|                           | Email address is incorrect.                                          |
-|                           | Password is incorrect.                                               |
+| 401 Unauthorized          | The Authorization header must specify a user access token.<br />     |
+|                           | The OAuth token is not valid.<br />                                  |
+|                           | Email address is incorrect.<br />                                    |
+|                           | Password is incorrect.<br />                                         |
 +---------------------------+----------------------------------------------------------------------+
 | 500 Internal Server Error |                                                                      |
 +---------------------------+----------------------------------------------------------------------+

@@ -51,10 +51,10 @@ Response Codes
 +===========================+======================================================================+
 | 201 Created               | PointOfInterest creation succeed.                                    |
 +---------------------------+----------------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token.           |
-|                           | The OAuth token is not valid.                                        |
-|                           | User id specified does not match the userId specified in token.      |
-|                           | User roles specified does not match roles specified in token.        |
+| 401 Unauthorized          | The Authorization header must specify a user access token.<br />     |
+|                           | The OAuth token is not valid.<br />                                  |
+|                           | User id specified does not match the userId specified in token.<br />|
+|                           | User roles specified does not match roles specified in token.<br />  |
 +---------------------------+----------------------------------------------------------------------+
 | 500 Internal Server Error | Latitude & longitude must be Double.                                 |
 +---------------------------+----------------------------------------------------------------------+
