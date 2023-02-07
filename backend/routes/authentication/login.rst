@@ -51,8 +51,8 @@ Response Codes
 +===========================+======================================================================+
 | 200 OK                    | User login succeed.                                                  |
 +---------------------------+----------------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token. <br>      |
-|                           | The OAuth token is not valid. <br>                                   |
+| 401 Unauthorized          | The Authorization header must specify a user access token. <br> The  |
+|                           | OAuth token is not valid. <br>                                       |
 |                           | Email address is incorrect. <br>                                     |
 |                           | Password is incorrect. <br>                                          |
 +---------------------------+----------------------------------------------------------------------+
