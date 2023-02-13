@@ -1,6 +1,6 @@
 .. _unlocked:
 
-Retrieve
+Unlocked
 ============
 
 Retrieve all unlocked Skin created.

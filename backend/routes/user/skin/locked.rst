@@ -1,6 +1,6 @@
 .. _locked:
 
-Retrieve
+Locked
 ============
 
 Retrieve all locked Skin.
