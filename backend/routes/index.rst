@@ -6,6 +6,7 @@ Routes
 .. toctree::
 
    authentication/index
-   user/index
-   trail/index
    poi/index
+   skin/index
+   trail/index
+   user/index

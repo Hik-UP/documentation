@@ -1,9 +1,9 @@
-.. _user:
+.. _skin:
 
-User
+Skin
 ===================================
 
 .. toctree::
 
-   skin/index
-   profile
+   create
+   retrieve
