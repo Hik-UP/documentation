@@ -42,9 +42,9 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | description   | String    | Unlocked Skin description.                                           |
 +---------------+-----------+----------------------------------------------------------------------+
-| pictures      | String[]  | Array of strings containing unlocked Skin pictures (base64).         |
+| pictures      | String[]  | Array of strings containing unlocked Skin pictures (URL).            |
 +---------------+-----------+----------------------------------------------------------------------+
-| model         | Double    | String containing unlocked Skin model (base64).                      |
+| model         | Double    | String containing unlocked Skin model (URL).                         |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes

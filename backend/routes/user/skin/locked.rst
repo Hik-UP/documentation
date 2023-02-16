@@ -42,9 +42,9 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | description   | String    | Locked Skin description.                                             |
 +---------------+-----------+----------------------------------------------------------------------+
-| pictures      | String[]  | Array of strings containing Locked Skin pictures (base64).           |
+| pictures      | String[]  | Array of strings containing Locked Skin pictures (URL).              |
 +---------------+-----------+----------------------------------------------------------------------+
-| model         | Double    | String containing Locked Skin model (base64).                        |
+| model         | Double    | String containing Locked Skin model (URL).                           |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes

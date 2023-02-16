@@ -42,9 +42,9 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | description   | String    | Skin description.                                                    |
 +---------------+-----------+----------------------------------------------------------------------+
-| pictures      | String[]  | Array of strings containing Skin pictures (base64).                  |
+| pictures      | String[]  | Array of strings containing Skin pictures (URL).                     |
 +---------------+-----------+----------------------------------------------------------------------+
-| model         | Double    | String containing Skin model (base64).                               |
+| model         | Double    | String containing Skin model (URL).                                  |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes

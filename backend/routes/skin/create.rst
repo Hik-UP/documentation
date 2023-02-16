@@ -34,9 +34,9 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | description   | String    | Yes           | Skin description.                                    |
 +---------------+-----------+---------------+------------------------------------------------------+
-| pictures      | String[]  | Yes           | Array of strings containing Skin pictures (base64).  |
+| pictures      | String[]  | Yes           | Array of strings containing Skin pictures (URL).     |
 +---------------+-----------+---------------+------------------------------------------------------+
-| model         | String    | Yes           | String containing Skin model (base64).               |
+| model         | String    | Yes           | String containing Skin model (URL).                  |
 +---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
