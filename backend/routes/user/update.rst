@@ -1,6 +1,6 @@
 .. _update:
 
-Details
+Update
 ============
 
 Update user profile.
@@ -67,8 +67,8 @@ Example Request
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["USER"],
-            "picture": "https://static.wikia.nocookie.net/denaruto3/images/f/f0/BorutoInMovie.png/revision/latest?cb=20150513165125&path-prefix=de"
+            "roles": ["XXXXXX"],
+            "picture": "https://xxxxxxxxxx.xxx"
         }
         
     }'
