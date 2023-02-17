@@ -56,7 +56,7 @@ Response Body
 +-------------------+-----------+----------------------------------------------------------------------+
 | temperature       | Int       | Temperature at the location of the Trail (°C).                       |
 +-------------------+-----------+----------------------------------------------------------------------+
-| icon              | Int       | Icon related to the weather at the location of the Trail (URL).      |
+| icon              | String    | Icon related to the weather at the location of the Trail (URL).      |
 +-------------------+-----------+----------------------------------------------------------------------+
 | weather           | Object    | Object containing weather data.                                      |
 +-------------------+-----------+----------------------------------------------------------------------+
