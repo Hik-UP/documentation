@@ -39,12 +39,6 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | id            | String    | Yes           | Trail unique identifier.                             |
 +---------------+-----------+---------------+------------------------------------------------------+
-| latitude      | Double    | Yes           | Latitude of the trail.                               |
-+---------------+-----------+---------------+------------------------------------------------------+
-| longitude     | Double    | Yes           | Longitude of the trail.                              |
-+---------------+-----------+---------------+------------------------------------------------------+
-| duration      | Int       | Yes           | Duration of the trail.                               |
-+---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
 ------------
@@ -104,10 +98,7 @@ Example Request
             "age": 20
         },
         "trail": {
-            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "latitude": 50.303814,
-            "longitude": 11.942139,
-            "duration": 4
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         }
     }'
 
