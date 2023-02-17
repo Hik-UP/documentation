@@ -27,7 +27,11 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | roles         | String[]  | Yes           | Roles assigned to the user.                          |
 +---------------+-----------+---------------+------------------------------------------------------+
-| picture       | String    | Yes           | Url image picture of user                            |
+| username      | String    | No            | Username.                                            |
++---------------+-----------+---------------+------------------------------------------------------+
+| email         | String    | No            | User email address.                                  |
++---------------+-----------+---------------+------------------------------------------------------+
+| picture       | String    | No            | User profile picture (URL).                          |
 +---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -69,6 +73,33 @@ Example Request
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "roles": ["XXXXXX"],
             "picture": "https://xxxxxxxxxx.xxx"
+        }
+        
+    }'
+
+.. code-block:: console
+
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
+    --data-raw '{
+        "user": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "roles": ["XXXXXX"],
+            "username": "xxxxxxxxxx",
+            "email": "xxxxx@xxxxx.xxx"
+        }
+        
+    }'
+
+.. code-block:: console
+
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
+    --data-raw '{
+        "user": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "roles": ["XXXXXX"],
+            "username": "xxxxxxxxxx"
         }
         
     }'
