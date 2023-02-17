@@ -36,7 +36,7 @@ Response Body
 +-------------------+-----------+----------------------------------------------------------------------+
 | Parameter         | Type      | Description                                                          |
 +===================+===========+======================================================================+
-| message           | String    | A message that represent the state of the request                    |
+| message           | String    | A message confirming that the user was updated.                      |
 +-------------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -62,8 +62,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update' \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
