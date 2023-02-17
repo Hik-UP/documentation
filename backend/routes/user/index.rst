@@ -7,3 +7,4 @@ User
 
    skin/index
    profile
+   update
