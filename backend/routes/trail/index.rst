@@ -7,3 +7,4 @@ Trail
 
    create
    retrieve
+   details
