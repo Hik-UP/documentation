@@ -56,6 +56,8 @@ Response Codes
 +===========================+======================================================================+
 | 201 Created               | Skin creation succeed.                                               |
 +---------------------------+----------------------------------------------------------------------+
+| 400 Bad Request           |                                                                      |
++---------------------------+----------------------------------------------------------------------+
 | 401 Unauthorized          | The Authorization header must specify a user access token.           |
 |                           | The OAuth token is not valid.                                        |
 |                           | User id specified does not match the userId specified in token.      |
