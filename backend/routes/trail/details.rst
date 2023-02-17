@@ -3,7 +3,7 @@
 Details
 ============
 
-Get detail of Trail.
+Get Trail details.
 
 Authentication
 ------------
@@ -27,25 +27,24 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | roles         | String[]  | Yes           | Roles assigned to the user.                          |
 +---------------+-----------+---------------+------------------------------------------------------+
-| weight        | Double    | Yes           | Weight of the user  (kg)                             |
+| weight        | Double    | Yes           | Weight of the user  (KG).                            |
 +---------------+-----------+---------------+------------------------------------------------------+
-| tall          | Int       | Yes           | Tall of the user (cm)                                |
+| tall          | Int       | Yes           | Tall of the user (CM).                               |
 +---------------+-----------+---------------+------------------------------------------------------+
-| sex           | String    | Yes           | Sex of the user (Only pass M|F)                      |
+| sex           | String    | Yes           | Sex of the user (M|F).                               |
 +---------------+-----------+---------------+------------------------------------------------------+
-| age           | Int       | Yes           | Age of the user                                      |
+| age           | Int       | Yes           | Age of the user.                                     |
 +---------------+-----------+---------------+------------------------------------------------------+
-| trail         | Object    | Yes           | Object containing trail data                         |
+| trail         | Object    | Yes           | Object containing trail data.                        |
 +---------------+-----------+---------------+------------------------------------------------------+
-| id            | String    | Yes           | Trail unique identifier                              |
+| id            | String    | Yes           | Trail unique identifier.                             |
 +---------------+-----------+---------------+------------------------------------------------------+
-| latitude      | Double    | Yes           | Latitude of the trail                                |
+| latitude      | Double    | Yes           | Latitude of the trail.                               |
 +---------------+-----------+---------------+------------------------------------------------------+
-| longitude     | Double    | Yes           | Longitude of the trail                               |
+| longitude     | Double    | Yes           | Longitude of the trail.                              |
 +---------------+-----------+---------------+------------------------------------------------------+
-| duration      | Int       | Yes           | Duration of the trail                                |
+| duration      | Int       | Yes           | Duration of the trail.                               |
 +---------------+-----------+---------------+------------------------------------------------------+
-
 
 Response Body
 ------------
@@ -53,11 +52,19 @@ Response Body
 +-------------------+-----------+----------------------------------------------------------------------+
 | Parameter         | Type      | Description                                                          |
 +===================+===========+======================================================================+
-| weather           | Int       | Current temperature in the hiking area                               |
+| weather           | Object    | Object containing weather data.                                      |
 +-------------------+-----------+----------------------------------------------------------------------+
-| tools             | String[]  | Tools to have for the hiking                                         |
+| temperature       | Int       | Temperature at the location of the Trail (°C).                       |
 +-------------------+-----------+----------------------------------------------------------------------+
-| calories          | Int       | Approximative number of calories to burn on the hiking               |
+| icon              | Int       | Icon related to the weather at the location of the Trail (URL).      |
++-------------------+-----------+----------------------------------------------------------------------+
+| weather           | Object    | Object containing weather data.                                      |
++-------------------+-----------+----------------------------------------------------------------------+
+| tools             | String[]  | Tools needed for the Trail.                                          |
++-------------------+-----------+----------------------------------------------------------------------+
+| relatedArticles   | String[]  | Articles related to the Trail (URL).                                 |
++-------------------+-----------+----------------------------------------------------------------------+
+| calories          | Int       | Approximative number of calories to burn on the Trail.               |
 +-------------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -83,13 +90,13 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/details' \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/details'  \
     --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "roles": [
-                "USER"
+                "XXXXX"
             ],
             "weight": 90,
             "tall": 68,
@@ -111,10 +118,10 @@ Example Response
 
     {
         "weather": {
-            "temp": 4,
-            "url_icon": "http://openweathermap.org/img/wn/01n@2x.png"
+            "temperature": 4,
+            "icon": "http://xxxxxx.xxxxxx"
         },
         "tools": [],
-        "recommendArticleUrls": [],
+        "relatedArticles": [],
         "calories": 21280
     }
