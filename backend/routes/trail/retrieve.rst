@@ -40,6 +40,8 @@ Response Body
 +-------------------+-----------+----------------------------------------------------------------------+
 | name              | String    | Trail name.                                                          |
 +-------------------+-----------+----------------------------------------------------------------------+
+| address           | String    | Trail address.                                                       |
++-------------------+-----------+----------------------------------------------------------------------+
 | description       | String    | Trail description.                                                   |
 +-------------------+-----------+----------------------------------------------------------------------+
 | pictures          | String[]  | Array of strings containing Trail pictures (URL).                    |
@@ -125,6 +127,7 @@ Example Response
             {
                 "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
                 "name": "xxxxxxxxxxx",
+                "address": "xxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
                     "xxxxxxxxxxxxxxx"
@@ -160,6 +163,7 @@ Example Response
             {
                 "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
                 "name": "xxxxxxxxxxx",
+                "address": "xxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
                     "xxxxxxxxxxxxxxx",
