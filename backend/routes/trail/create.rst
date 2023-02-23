@@ -32,6 +32,8 @@ Request Body
 +-------------------+-----------+---------------+------------------------------------------------------+
 | name              | String    | Yes           | Trail name.                                          |
 +-------------------+-----------+---------------+------------------------------------------------------+
+| address           | String    | Yes           | Trail address.                                       |
++-------------------+-----------+---------------+------------------------------------------------------+
 | description       | String    | Yes           | Trail description.                                   |
 +-------------------+-----------+---------------+------------------------------------------------------+
 | pictures          | String[]  | Yes           | Array of strings containing Trail pictures (URL).    |
@@ -100,6 +102,7 @@ Example Request
         },
         "trail": {
             "name": "xxxxxxxxxxx",
+            "address": "xxxxxxxx",
             "description": "xxxx",
             "pictures": ["xxxxx"],
             "latitude": 48.862725,
