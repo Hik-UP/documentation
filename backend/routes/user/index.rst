@@ -6,5 +6,6 @@ User
 .. toctree::
 
    skin/index
+   hike/index
    profile
    update

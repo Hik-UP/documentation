@@ -1,9 +1,9 @@
-.. _update:
+.. _refuse:
 
-Update
+Refuse
 ============
 
-Update user profile.
+Refuse to participate to a hike.
 
 Authentication
 ------------
@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update`
+:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/refuse`
 
 Request Body
 ------------
@@ -27,11 +27,9 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | roles         | String[]  | Yes           | Roles assigned to the user.                          |
 +---------------+-----------+---------------+------------------------------------------------------+
-| username      | String    | No            | Username.                                            |
+| hike          | Object    | Yes           | Object containing hike data.                         |
 +---------------+-----------+---------------+------------------------------------------------------+
-| email         | String    | No            | User email address.                                  |
-+---------------+-----------+---------------+------------------------------------------------------+
-| picture       | String    | No            | User profile picture (URL).                          |
+| id            | String    | Yes           | Hike unique identifier.                              |
 +---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -49,7 +47,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | Trail was successfully retrieved.                                    |
+| 200 OK                    | Hike was successfully refused.                                       |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -66,42 +64,16 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/refuse'   \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
     --data-raw '{
         "user": {
-            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "picture": "https://xxxxxxxxxx.xxx"
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "roles": ["XXXX"]
+        },
+        "hike": {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         }
-        
-    }'
-
-.. code-block:: console
-
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
-    --data-raw '{
-        "user": {
-            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "username": "xxxxxxxxxx",
-            "email": "xxxxx@xxxxx.xxx"
-        }
-        
-    }'
-
-.. code-block:: console
-
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update'    \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
-    --data-raw '{
-        "user": {
-            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "username": "xxxxxxxxxx"
-        }
-        
     }'
 
 Example Response
