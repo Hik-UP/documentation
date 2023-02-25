@@ -7,3 +7,4 @@ Hike
 
    create
    retrieve
+   update
