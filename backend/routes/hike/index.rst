@@ -8,3 +8,4 @@ Hike
    create
    retrieve
    update
+   remove
