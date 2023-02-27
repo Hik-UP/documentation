@@ -1,8 +1,9 @@
-.. _hike:
+.. _guest:
 
-Hike
+Guest
 ===================================
 
 .. toctree::
 
-   retrieve
+   accept
+   refuse

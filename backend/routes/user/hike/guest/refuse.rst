@@ -1,9 +1,9 @@
-.. _accept:
+.. _refuse:
 
-Accept
+Refuse
 ============
 
-Accept to participate to a hike.
+Refuse to participate to a hike.
 
 Authentication
 ------------
@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/accept`
+:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/guest/refuse`
 
 Request Body
 ------------
@@ -47,7 +47,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | Hike was successfully accepted.                                      |
+| 200 OK                    | Hike was successfully refused.                                       |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -64,8 +64,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/accept'   \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
+    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/guest/refuse'  \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

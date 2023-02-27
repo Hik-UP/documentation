@@ -1,9 +1,9 @@
-.. _create:
+.. _leave:
 
-Create
+Leave
 ============
 
-Create a new Hike.
+Leave a Hike.
 
 Authentication
 ------------
@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`POST https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/create`
+:code:`DELETE https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/attendee/leave`
 
 Request Body
 ------------
@@ -27,21 +27,9 @@ Request Body
 +-------------------+-----------+---------------+------------------------------------------------------+
 | roles             | String[]  | Yes           | Roles assigned to the user.                          |
 +-------------------+-----------+---------------+------------------------------------------------------+
-| trail             | Object    | Yes           | Object containing Trail data.                        |
-+-------------------+-----------+---------------+------------------------------------------------------+
-| id                | String    | Yes           | Trail unique identifier.                             |
-+-------------------+-----------+---------------+------------------------------------------------------+
 | hike              | Object    | Yes           | Object containing Hike data.                         |
 +-------------------+-----------+---------------+------------------------------------------------------+
-| name              | String    | Yes           | Hike name.                                           |
-+-------------------+-----------+---------------+------------------------------------------------------+
-| description       | String    | Yes           | Hike description.                                    |
-+-------------------+-----------+---------------+------------------------------------------------------+
-| guests            | Object[]  | No            | Object containing guests data.                       |
-+-------------------+-----------+---------------+------------------------------------------------------+
-| email             | String    | Yes           | Guest email address.                                 |
-+-------------------+-----------+---------------+------------------------------------------------------+
-| schedule          | Date      | No            | Hike schedule date (Epoch Unix Timestamp).           |
+| id                | String    | Yes           | Hike unique identifier.                              |
 +-------------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -50,7 +38,7 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | Parameter     | Type      | Description                                                          |
 +===============+===========+======================================================================+
-| message       | String    | A message confirming that the Hike was created.                      |
+| message       | String    | A message confirming that the Hike was leaved.                      |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -59,7 +47,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 201 Created               | Hike creation succeed.                                               |
+| 200 OK                    | Hike was successfully leaved.                                       |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -76,28 +64,15 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/create'    \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
+    curl --location --request DELETE 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/attendee/leave' \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                          \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "roles": ["XXXX"]
         },
-        "trail": {
-            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        },
         "hike": {
-            "name": "xxxxxxxxxxx",
-            "description": "xxxx",
-            "guests": [
-                {
-                    "email": "xxxx@xxxx.xxx"
-                },
-                {
-                    "email": "xxxx@xxxx.xxx"
-                }
-            ],
-            "schedule": 1677230731
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         }
     }'
 
@@ -107,5 +82,5 @@ Example Response
 .. code-block:: console
 
     {
-        "message": "Created"
+        "message": "Updated"
     }

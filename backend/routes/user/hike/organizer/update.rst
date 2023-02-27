@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/update`
+:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/update`
 
 Request Body
 ------------
@@ -90,8 +90,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/update'     \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
+    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/update'  \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                          \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

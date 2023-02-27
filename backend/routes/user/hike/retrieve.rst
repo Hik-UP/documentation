@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`POST https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/retrieve`
+:code:`POST https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/retrieve`
 
 Request Body
 ------------
@@ -316,8 +316,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/retrieve'  \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
+    curl --location --request POST 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/retrieve' \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",

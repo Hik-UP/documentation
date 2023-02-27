@@ -1,9 +1,9 @@
-.. _leave:
+.. _remove:
 
-Leave
+Remove
 ============
 
-Leave a Hike.
+Remove an existing Hike.
 
 Authentication
 ------------
@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`DELETE https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/leave`
+:code:`DELETE https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/remove`
 
 Request Body
 ------------
@@ -38,7 +38,7 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | Parameter     | Type      | Description                                                          |
 +===============+===========+======================================================================+
-| message       | String    | A message confirming that the Hike was leaved.                      |
+| message       | String    | A message confirming that the Hike was removed.                      |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -47,7 +47,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | Hike was successfully leaved.                                       |
+| 200 OK                    | Hike was successfully removed.                                       |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -64,8 +64,8 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request DELETE 'https://pro-hikup.westeurope.cloudapp.azure.com/api/hike/leave'   \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                              \
+    curl --location --request DELETE 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/remove'   \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                              \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -82,5 +82,5 @@ Example Response
 .. code-block:: console
 
     {
-        "message": "Updated"
+        "message": "Deleted"
     }

@@ -1,8 +1,8 @@
-.. _hike:
+.. _attendee:
 
-Hike
+Attendee
 ===================================
 
 .. toctree::
 
-   retrieve
+   leave

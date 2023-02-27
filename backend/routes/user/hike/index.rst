@@ -5,5 +5,7 @@ Hike
 
 .. toctree::
 
-   accept
-   refuse
+   retrieve
+   organizer/index
+   attendee/index
+   guest/index
