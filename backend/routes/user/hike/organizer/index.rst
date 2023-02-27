@@ -5,6 +5,5 @@ Organizer
 
 .. toctree::
 
-   create
    update
    remove

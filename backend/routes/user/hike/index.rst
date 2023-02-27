@@ -5,6 +5,7 @@ Hike
 
 .. toctree::
 
+   create
    retrieve
    organizer/index
    attendee/index
