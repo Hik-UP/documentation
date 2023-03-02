@@ -7,5 +7,6 @@ User
 
    skin/index
    hike/index
+   poi/index
    profile
    update
