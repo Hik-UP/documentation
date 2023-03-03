@@ -8,3 +8,4 @@ PointOfInterest
    create
    retrieve
    update
+   remove

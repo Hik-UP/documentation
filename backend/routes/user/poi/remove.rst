@@ -3,18 +3,18 @@
 Remove
 ============
 
-Remove an existing Hike.
+Remove an existing PointOfInterest.
 
 Authentication
 ------------
 
 Requires an access token.
-User must be the organizer of the Hike.
+User must be the creator of the PointOfInterest.
 
 URL
 ------------
 
-:code:`DELETE https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/remove`
+:code:`DELETE https://pro-hikup.westeurope.cloudapp.azure.com/api/user/poi/remove`
 
 Request Body
 ------------
@@ -28,9 +28,9 @@ Request Body
 +-------------------+-----------+---------------+------------------------------------------------------+
 | roles             | String[]  | Yes           | Roles assigned to the user.                          |
 +-------------------+-----------+---------------+------------------------------------------------------+
-| hike              | Object    | Yes           | Object containing Hike data.                         |
+| poi               | Object    | Yes           | Object containing PointOfInterest data.              |
 +-------------------+-----------+---------------+------------------------------------------------------+
-| id                | String    | Yes           | Hike unique identifier.                              |
+| id                | String    | Yes           | PointOfInterest unique identifier.                   |
 +-------------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -39,7 +39,7 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | Parameter     | Type      | Description                                                          |
 +===============+===========+======================================================================+
-| message       | String    | A message confirming that the Hike was removed.                      |
+| message       | String    | A message confirming that the PointOfInterest was removed.           |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -48,7 +48,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | Hike was successfully removed.                                       |
+| 200 OK                    | PointOfInterest was successfully removed.                            |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -65,14 +65,14 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request DELETE 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/hike/organizer/remove'   \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                              \
+    curl --location --request DELETE 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/poi/remove'  \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
     --data-raw '{
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "roles": ["XXXX"]
         },
-        "hike": {
+        "poi": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         }
     }'
