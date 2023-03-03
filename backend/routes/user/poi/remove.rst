@@ -3,13 +3,12 @@
 Remove
 ============
 
-Remove an existing PointOfInterest.
+Remove an existing PointOfInterest from shared or created list.
 
 Authentication
 ------------
 
 Requires an access token.
-User must be the creator of the PointOfInterest.
 
 URL
 ------------
