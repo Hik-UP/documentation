@@ -37,7 +37,7 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | description   | String    | Yes           | PointOfInterest description.                         |
 +---------------+-----------+---------------+------------------------------------------------------+
-| pictures      | String[]  | Yes           | Array of strings containing POI pictures (URL).      |
+| pictures      | String[]  | No            | Array of strings containing POI pictures (URL).      |
 +---------------+-----------+---------------+------------------------------------------------------+
 | sharedWith    | Object[]  | No            | Object containing shared user data.                  |
 +---------------+-----------+---------------+------------------------------------------------------+
