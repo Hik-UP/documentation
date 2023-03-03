@@ -3,7 +3,7 @@
 Retrieve
 ============
 
-Retrieve all PointOfInterest created by user.
+Retrieve all PointOfInterest created or shared with user.
 
 Authentication
 ------------
@@ -27,6 +27,10 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | roles         | String[]  | Yes           | Roles assigned to the user.                          |
 +---------------+-----------+---------------+------------------------------------------------------+
+| poi           | Object    | Yes           | Object containing poi data.                          |
++---------------+-----------+---------------+------------------------------------------------------+
+| target        | String[]  | Yes           | Values: created || shared                            |
++---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
 ------------
@@ -36,9 +40,25 @@ Response Body
 +===============+===========+======================================================================+
 | poi           | Object[]  | Array of objects containing PointOfInterest data.                    |
 +---------------+-----------+----------------------------------------------------------------------+
+| id            | String    | PointOfInterest unique identifier.                                   |
++---------------+-----------+----------------------------------------------------------------------+
+| name          | String    | PointOfInterest name.                                                |
++---------------+-----------+----------------------------------------------------------------------+
+| description   | String    | PointOfInterest description.                                         |
++---------------+-----------+----------------------------------------------------------------------+
+| pictures      | String[]  | Array of strings containing POI pictures (URL).                      |
++---------------+-----------+----------------------------------------------------------------------+
+| sharedWith    | Object[]  | Array of objects containing shared user data.                        |
++---------------+-----------+----------------------------------------------------------------------+
+| username      | String    | Username.                                                            |
++---------------+-----------+----------------------------------------------------------------------+
+| picture       | String    | User profile picture (URL).                                          |
++---------------+-----------+----------------------------------------------------------------------+
 | latitude      | Double    | PointOfInterest latitude coordinate.                                 |
 +---------------+-----------+----------------------------------------------------------------------+
 | longitude     | Double    | PointOfInterest longitude coordinate.                                |
++---------------+-----------+----------------------------------------------------------------------+
+| createdAt     | Date      | PointOfInterest creation date (Epoch Unix Timestamp).                |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -70,6 +90,9 @@ Example Request
         "user": {
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "roles": ["XXXX"]
+        },
+        "hike": {
+            "target": ["created", "shared"]
         }
     }'
 
@@ -79,16 +102,57 @@ Example Response
 .. code-block:: console
 
     {
-        "poi": [{
-            "latitude": 00.000000000000,
-            "longitude": 0.0000000000000
-        },
-        {
-            "latitude": 00.000000000000,
-            "longitude": 0.0000000000000
-        },
-        {
-            "latitude": 00.000000000000,
-            "longitude": 0.0000000000000
-        }]
+        "poi": {
+            "created": [
+                {
+                    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                    "name": "xxxxxxxxxxxxxxxxx",
+                    "description": "xxxxxxxxxx",
+                    "pictures": [
+                        "https://xxxxxxx.xxx"
+                    ],
+                    "creator": {
+                        "username": "xxxxxxxxxxx",
+                        "picture": "https://xxxxxxx.xxx"
+                    },
+                    "sharedWith": [
+                        {
+                            "username": "xxxxxxx",
+                            "picture": "https://xxxxxx.xxx"
+                        }
+                    ],
+                    "trail": {
+                        "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        "name": "xxxxxxxxxxxx",
+                        "address": "xxxxxxxxxxxxxxx",
+                        "description": "xxxxxxxxxxxxxxxxx",
+                        "pictures": [
+                            "https://xxxxxxxx.xxxxx"
+                        ],
+                        "latitude": 0.000000000000,
+                        "longitude": 0.000000000000,
+                        "difficulty": 0,
+                        "duration": 0,
+                        "distance": 0,
+                        "uphill": 0,
+                        "downhill": 0,
+                        "tools": [
+                            "https://xxxxxxxxx.xxxxxx"
+                        ],
+                        "relatedArticles": [
+                            "https://xxxxxx.xxx"
+                        ],
+                        "labels": [
+                            "xxxxxxx"
+                        ],
+                        "geoJSON": "xxxxxxxxxxxx",
+                        "comments": []
+                    },
+                    "latitude": 0.000000000000,
+                    "longitude": 0.000000000000,
+                    "createdAt": "2020-01-20T09:35:52.359Z"
+                }
+            ],
+            "shared": []
+        }
     }

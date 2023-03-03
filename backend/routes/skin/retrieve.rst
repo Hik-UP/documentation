@@ -91,7 +91,7 @@ Example Response
                 "name": "xxxxxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
-                    "xxxxxxxxxxxxxxx"
+                    "https://xxxxxx.xxx"
                 ],
                 "model": "xxxxxxxxxx"
             },
@@ -100,7 +100,7 @@ Example Response
                 "name": "xxxxxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
-                    "xxxxxxxxxxxxxxx"
+                    "https://xxxxxx.xxx"
                 ],
                 "model": "xxxxxxxxxx"
             }

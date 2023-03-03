@@ -348,8 +348,8 @@ Example Response
                         "pictures": [
                             "https://xxxxxx.xxx"
                         ],
-                        "latitude": 48.862725,
-                        "longitude": 2.287592,
+                        "latitude": 0.000000000000,
+                        "longitude": 0.000000000000,
                         "difficulty": 0,
                         "duration": 0,
                         "distance": 0,
@@ -402,8 +402,8 @@ Example Response
                         "pictures": [
                             "https://xxxxxx.xxx"
                         ],
-                        "latitude": 48.862725,
-                        "longitude": 2.287592,
+                        "latitude": 0.000000000000,
+                        "longitude": 0.000000000000,
                         "difficulty": 0,
                         "duration": 0,
                         "distance": 0,
@@ -456,8 +456,8 @@ Example Response
                         "pictures": [
                             "https://xxxxxx.xxx"
                         ],
-                        "latitude": 48.862725,
-                        "longitude": 2.287592,
+                        "latitude": 0.000000000000,
+                        "longitude": 0.000000000000,
                         "difficulty": 0,
                         "duration": 0,
                         "distance": 0,
@@ -508,8 +508,8 @@ Example Response
                         "pictures": [
                             "https://xxxxxx.xxx"
                         ],
-                        "latitude": 48.862725,
-                        "longitude": 2.287592,
+                        "latitude": 0.000000000000,
+                        "longitude": 0.000000000000,
                         "difficulty": 0,
                         "duration": 0,
                         "distance": 0,

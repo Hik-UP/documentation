@@ -33,6 +33,16 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | poi           | Object    | Yes           | Object containing PointOfInterest data.              |
 +---------------+-----------+---------------+------------------------------------------------------+
+| name          | String    | Yes           | PointOfInterest name.                                |
++---------------+-----------+---------------+------------------------------------------------------+
+| description   | String    | Yes           | PointOfInterest description.                         |
++---------------+-----------+---------------+------------------------------------------------------+
+| pictures      | String[]  | Yes           | Array of strings containing POI pictures (URL).      |
++---------------+-----------+---------------+------------------------------------------------------+
+| sharedWith    | Object[]  | No            | Object containing shared user data.                  |
++---------------+-----------+---------------+------------------------------------------------------+
+| email         | String    | Yes           | User email address.                                  |
++---------------+-----------+---------------+------------------------------------------------------+
 | latitude      | Double    | Yes           | PointOfInterest latitude coordinate.                 |
 +---------------+-----------+---------------+------------------------------------------------------+
 | longitude     | Double    | Yes           | PointOfInterest longitude coordinate.                |
@@ -81,7 +91,18 @@ Example Request
             "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         },
         "poi": {
-            "latitude": 00.000000000000,
+            "name": "xxxxxxxxxxxxxxxxx",
+            "description": "xxxxxxxxxx",
+            "pictures": ["https://xxxxxxx.xxx"],
+            "sharedWith": [
+                {
+                    "email": "xxxx@xxxx.xxx"
+                },
+                {
+                    "email": "xxxx@xxxx.xxx"
+                }
+            ],
+            "latitude": 0.000000000000,
             "longitude": 0.0000000000000
         }
     }'

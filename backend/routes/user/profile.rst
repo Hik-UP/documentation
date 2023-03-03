@@ -84,6 +84,6 @@ Example Response
         "user": {
             "username": "xxxxxxxxxx",
             "email": "xxxx@xxxx.xxx",
-            "picture": "xxxxxxxxxxx"
+            "picture": "https://xxxxxx.xxx"
         }
     }

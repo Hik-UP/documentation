@@ -130,10 +130,10 @@ Example Response
                 "address": "xxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
-                    "xxxxxxxxxxxxxxx"
+                    "https://xxxxxx.xxx"
                 ],
-                "latitude": 48.862725,
-                "longitude": 2.287592,
+                "latitude": 0.000000000000,
+                "longitude": 0.000000000000,
                 "difficulty": 0,
                 "duration": 0,
                 "distance": 0,
@@ -143,7 +143,7 @@ Example Response
                     "xxxxxxxxxxxxxxxxxxxx"
                 ],
                 "relatedArticles": [
-                    "xxxxxxxxxx"
+                    "https://xxxxxx.xxx"
                 ],
                 "labels": [
                     "xxxx"
@@ -152,11 +152,11 @@ Example Response
                 "comments": [
                     {
                         "username": "xxxxxxxx",
-                        "picture": "xxxxxxxxx"
+                        "picture": "https://xxxxxx.xxx"
                     },
                     {
                         "username": "xxxxxxxx",
-                        "picture": "xxxxxxxxx"
+                        "picture": "https://xxxxxx.xxx"
                     }
                 ]
             },
@@ -166,11 +166,11 @@ Example Response
                 "address": "xxxxxxxx",
                 "description": "xxxx",
                 "pictures": [
-                    "xxxxxxxxxxxxxxx",
-                    "xxxxxxxxxxxxxxx"
+                    "https://xxxxxx.xxx",
+                    "https://xxxxxx.xxx"
                 ],
-                "latitude": 48.869725,
-                "longitude": 9.287592,
+                "latitude": 0.000000000000,
+                "longitude": 0.000000000000,
                 "difficulty": 0,
                 "duration": 0,
                 "distance": 0,
@@ -180,7 +180,7 @@ Example Response
                     "xxxxxxxxxxxxxxxxxxxx"
                 ],
                 "relatedArticles": [
-                    "xxxxxxxxxx"
+                    "https://xxxxxx.xxx"
                 ],
                 "labels": [
                     "xxxx"
@@ -189,7 +189,7 @@ Example Response
                 "comments": [
                     {
                         "username": "xxxxxxxx",
-                        "picture": "xxxxxxxxx"
+                        "picture": "https://xxxxxx.xxx"
                     }
                 ]
             }

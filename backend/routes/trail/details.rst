@@ -92,10 +92,10 @@ Example Request
             "roles": [
                 "XXXXX"
             ],
-            "weight": 90,
-            "tall": 68,
+            "weight": 0,
+            "tall": 0,
             "sex": "F",
-            "age": 20
+            "age": 0
         },
         "trail": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -109,10 +109,10 @@ Example Response
 
     {
         "weather": {
-            "temperature": 4,
-            "icon": "http://xxxxxx.xxxxxx"
+            "temperature": 0,
+            "icon": "https://xxxxxx.xxx"
         },
         "tools": [],
-        "relatedArticles": [],
-        "calories": 21280
+        "relatedArticles": ["https://xxxxxx.xxx"],
+        "calories": 0
     }

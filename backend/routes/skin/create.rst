@@ -81,7 +81,7 @@ Example Request
         "skin": {
             "name": "xxxxxxxxxxx",
             "description": "xxxx",
-            "pictures": ["xxxxx"],
+            "pictures": ["https://xxxxxx.xxx"],
             "model": "xxxxxxxxxx"
         }
     }'
