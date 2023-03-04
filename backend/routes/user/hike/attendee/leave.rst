@@ -51,7 +51,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token. <br /> lol|
+| 401 Unauthorized          | The Authorization header must specify a user access token. <br> lol|
 |                           | The OAuth token is not valid.                                        |
 |                           | User id specified does not match the userId specified in token.      |
 |                           | User roles specified does not match roles specified in token.        |
