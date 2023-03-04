@@ -38,7 +38,7 @@ Response Body
 +---------------+-----------+----------------------------------------------------------------------+
 | Parameter     | Type      | Description                                                          |
 +===============+===========+======================================================================+
-| message       | String    | A message confirming that the Hike was leaved.                      |
+| message       | String    | A message confirming that the Hike was leaved.                       |
 +---------------+-----------+----------------------------------------------------------------------+
 
 Response Codes
@@ -47,11 +47,11 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | Hike was successfully leaved.                                       |
+| 200 OK                    | Hike was successfully leaved.                                        |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
-| 401 Unauthorized          | The Authorization header must specify a user access token.           |
+| 401 Unauthorized          | The Authorization header must specify a user access token. <br /> lol|
 |                           | The OAuth token is not valid.                                        |
 |                           | User id specified does not match the userId specified in token.      |
 |                           | User roles specified does not match roles specified in token.        |
