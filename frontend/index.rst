@@ -1,5 +1,10 @@
-**Frontend**
+.. _frontend:
 
-Authentication/index
-developement/index
-Homepage/index
+Frontend
+===================================
+
+..  toctree::
+
+    Authentication/index
+    developement/index
+    Homepage/index

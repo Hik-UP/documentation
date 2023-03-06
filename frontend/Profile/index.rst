@@ -1,4 +1,9 @@
-**Profile**
+.. _profile:
 
-update_profile
-complete_profile
+Profile
+===================================
+
+.. toctree::
+
+    update_profile
+    complete_profile

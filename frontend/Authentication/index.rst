@@ -1,4 +1,9 @@
-**Authentication**
+.. _authentication:
 
-login
-register
+Authentication
+===================================
+
+..  toctree::
+
+    login
+    register

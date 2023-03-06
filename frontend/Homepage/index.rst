@@ -1,3 +1,8 @@
-**Homepage**
+.. _homepage:
 
-homepage
+Homepage
+===================================
+
+..  toctree::
+
+    homepage

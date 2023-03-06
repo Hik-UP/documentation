@@ -1,3 +1,7 @@
-**Developement**
+.. _developement:
+
+Getting Started
+===================================
+
 
 getting_started/index

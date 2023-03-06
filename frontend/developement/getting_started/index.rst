@@ -1,4 +1,9 @@
-**Getting started**
+.. _developement:
 
-run
-installation
+Getting Started
+===================================
+
+.. toctree::
+    
+    run
+    installation

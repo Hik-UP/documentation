@@ -1,4 +1,7 @@
-**Homepage**
+.. _homepage:
+
+Homepage
+------------
 
 After the user login, A pop up appear and ask him to allow his location.
 The user have the choice.

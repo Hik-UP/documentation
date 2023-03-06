@@ -1,4 +1,7 @@
-**Complete_profile**
+.. _complete_profile:
+
+Complete_profile
+------------
 
 When the user arrive on the page
 
@@ -7,5 +10,5 @@ The user must see 4 input box
 If the user enter his age for example, he must complete his weight,
 his height, and select his gender
 
-<h3>After that, the user click on the button "Add" and the information that he completed
-add to his profile.</h3>
+After that, the user click on the button "Add" and the information that he completed
+add to his profile.
