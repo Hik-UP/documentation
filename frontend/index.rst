@@ -5,6 +5,7 @@ Frontend
 
 ..  toctree::
 
-    Authentication/index
+    authentication/index
     developement/index
-    Homepage/index
+    homepage/index
+    profile/index
