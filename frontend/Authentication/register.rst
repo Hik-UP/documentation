@@ -1,4 +1,7 @@
-**Register**
+.. _Register:
+
+Register
+============
 
 On the Register page the user must see 3 input box.
 
