@@ -11,3 +11,4 @@ To Do
    :maxdepth: 10
 
    backend/index
+   frontend/index
