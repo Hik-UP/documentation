@@ -1,7 +1,9 @@
 .. _developement:
 
-Getting Started
+Developement
 ===================================
 
-
-getting_started
+.. toctree::
+    
+    run
+    installation
