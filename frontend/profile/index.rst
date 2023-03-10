@@ -5,6 +5,6 @@ Profile
 
 .. toctree::
 
-    update_profile
-    complete_profile
+    update profile
+    complete profile
     logout
