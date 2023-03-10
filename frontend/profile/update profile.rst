@@ -10,3 +10,4 @@ The user can choose a picture in his gallery
 
 The user can take a picture with his camera
 
+.. image:: update.png
