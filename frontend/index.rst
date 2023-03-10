@@ -9,3 +9,4 @@ Frontend
     developement/index
     homepage/index
     profile/index
+    search/index
