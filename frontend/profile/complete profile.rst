@@ -1,6 +1,6 @@
 .. _complete_profile:
 
-Complete_profile
+Complete profile
 ------------
 
 When the user arrive on the page

@@ -1,6 +1,6 @@
 .. _upadate_profile:
 
-Update_profile
+Update profile
 ------------
 
 For this page, the user can put a profile picture.
