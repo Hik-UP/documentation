@@ -12,3 +12,5 @@ The user must enter a valid email.
 The user must enter 8 characters for his password.
 
 After that, the user click on the button Register, and his account is created.
+
+    .. image:: register.png
