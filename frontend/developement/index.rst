@@ -4,4 +4,4 @@ Getting Started
 ===================================
 
 
-getting_started/index
+getting_started
