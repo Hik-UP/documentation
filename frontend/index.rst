@@ -10,3 +10,4 @@ Frontend
     homepage/index
     profile/index
     search/index
+    user/index
