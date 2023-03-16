@@ -1,11 +1,8 @@
-.. _trail:
+.. _comment:
 
-Trail
+Comment
 ===================================
 
 .. toctree::
 
-   comment/index
    create
-   retrieve
-   details

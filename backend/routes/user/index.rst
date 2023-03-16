@@ -5,8 +5,8 @@ User
 
 .. toctree::
 
-   skin/index
    hike/index
    poi/index
+   skin/index
    profile
    update
