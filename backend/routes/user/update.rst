@@ -33,6 +33,8 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | picture       | String    | No            | User profile picture (URL).                          |
 +---------------+-----------+---------------+------------------------------------------------------+
+| fcmToken      | String    | No            | Google Cloud Messaging registration token.           |
++---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
 ------------
@@ -72,7 +74,8 @@ Example Request
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "roles": ["XXXXXX"],
-            "picture": "https://xxxxxxxxxx.xxx"
+            "picture": "https://xxxxxxxxxx.xxx",
+            "fcmToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         }
         
     }'
