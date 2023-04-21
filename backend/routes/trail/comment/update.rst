@@ -3,7 +3,7 @@
 Update
 ============
 
-Update user profile.
+Update Trail Comment.
 
 Authentication
 ------------
@@ -13,7 +13,7 @@ Requires an access token.
 URL
 ------------
 
-:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update`
+:code:`PUT https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/comment/update`
 
 Request Body
 ------------
@@ -27,13 +27,13 @@ Request Body
 +---------------+-----------+---------------+------------------------------------------------------+
 | roles         | String[]  | Yes           | Roles assigned to the user.                          |
 +---------------+-----------+---------------+------------------------------------------------------+
-| username      | String    | No            | Username.                                            |
+| comment       | Object    | Yes           | Object containing comment data.                      |
 +---------------+-----------+---------------+------------------------------------------------------+
-| email         | String    | No            | User email address.                                  |
+| id            | String    | Yes           | Comment unique identifier.                           |
 +---------------+-----------+---------------+------------------------------------------------------+
-| picture       | String    | No            | User profile picture (URL).                          |
+| body          | String    | No            | Comment body.                                        |
 +---------------+-----------+---------------+------------------------------------------------------+
-| fcmToken      | String    | No            | Google Cloud Messaging registration token.           |
+| pictures      | String[]  | No            | Array of pictures attached to Comment (URL).         |
 +---------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
@@ -42,7 +42,7 @@ Response Body
 +-------------------+-----------+------------------------------------------------------------------+
 | Parameter         | Type      | Description                                                      |
 +===================+===========+==================================================================+
-| message           | String    | A message confirming that the user was updated.                  |
+| message           | String    | A message confirming that the Trail Comment was updated.         |
 +-------------------+-----------+------------------------------------------------------------------+
 
 Response Codes
@@ -51,7 +51,7 @@ Response Codes
 +---------------------------+----------------------------------------------------------------------+
 | HTTP Code                 | Meaning                                                              |
 +===========================+======================================================================+
-| 200 OK                    | User was successfully updated.                                       |
+| 200 OK                    | Trail Comment was successfully updated.                              |
 +---------------------------+----------------------------------------------------------------------+
 | 400 Bad Request           |                                                                      |
 +---------------------------+----------------------------------------------------------------------+
@@ -68,39 +68,47 @@ Example Request
 
 .. code-block:: console
 
-    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update' \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
+    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/comment/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "picture": "https://xxxxxxxxxx.xxx",
-            "fcmToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            "roles": ["XXXXXX"]
+        },
+        "comment": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "body": "xxxxxxxxxxxx",
+            "pictures": ["https://xxxxxxxxxxxx.xxx"]
         }
     }'
 
 .. code-block:: console
 
-    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update' \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
+    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/comment/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "username": "xxxxxxxxxx",
-            "email": "xxxxx@xxxxx.xxx"
+            "roles": ["XXXXXX"]
+        },
+        "comment": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "body": "xxxxxxxxxxxx"
         }
     }'
 
 .. code-block:: console
 
-    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/user/profile/update' \
-    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                  \
+    curl --location --request PUT 'https://pro-hikup.westeurope.cloudapp.azure.com/api/trail/comment/update'    \
+    --header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'                                      \
     --data-raw '{
         "user": {
             "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-            "roles": ["XXXXXX"],
-            "username": "xxxxxxxxxx"
+            "roles": ["XXXXXX"]
+        },
+        "comment": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "pictures": ["https://xxxxxxxxxxxx.xxx"]
         }
     }'
 
