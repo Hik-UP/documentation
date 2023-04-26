@@ -11,3 +11,4 @@ Frontend
     profile/index
     search/index
     user/index
+    event/index
