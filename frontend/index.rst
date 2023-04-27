@@ -12,3 +12,5 @@ Frontend
     search/index
     user/index
     event/index
+    map/index
+    invite/index
