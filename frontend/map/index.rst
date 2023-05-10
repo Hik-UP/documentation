@@ -7,6 +7,3 @@ Map
     
     map
 
-.. image:: day.png
-.. image:: mat.png
-.. image:: night.png

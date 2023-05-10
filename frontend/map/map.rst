@@ -11,5 +11,3 @@ With this feature the user can have a better experience on the app.
 test test
 
 .. image:: day.png
-..  image:: mat.png
-..  image:: night.png
