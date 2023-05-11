@@ -14,3 +14,4 @@ Frontend
     event/index
     map/index
     invite/index
+    poi/index
