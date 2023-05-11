@@ -10,4 +10,4 @@ There are 3 modes morning, day and night.
 With this feature the user can have a better experience on the app.
 test test
 
-.. image:: day.png
+    .. image:: day.png
