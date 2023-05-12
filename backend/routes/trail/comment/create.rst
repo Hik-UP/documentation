@@ -35,7 +35,7 @@ Request Body
 +-------------------+-----------+---------------+------------------------------------------------------+
 | body              | String    | Yes           | Comment body.                                        |
 +-------------------+-----------+---------------+------------------------------------------------------+
-| pictures          | String[]  | Yes           | Array of strings containing comment pictures (URL).  |
+| pictures          | String[]  | No            | Array of strings containing comment pictures (URL).  |
 +-------------------+-----------+---------------+------------------------------------------------------+
 
 Response Body
