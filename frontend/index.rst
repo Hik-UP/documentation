@@ -16,3 +16,4 @@ Frontend
     invite/index
     poi/index
     notification/index
+    comment/index
