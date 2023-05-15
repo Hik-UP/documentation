@@ -8,4 +8,4 @@ The user have the choice.
 
 When the user accepected he can see his position on the map.
 
-    .. image:: homepage2.png
+    .. image:: hompage2.png
