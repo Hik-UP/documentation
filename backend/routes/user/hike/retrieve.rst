@@ -443,6 +443,17 @@ Example Response
                             "picture": "https://xxxxxx.xxx"
                         }
                     ],
+                    "stats": [
+                        {
+                            "user": {
+                                "username": "xxxxxxxx",
+                                "picture": "https://xxxxxx.xxx"
+                            },
+                            "steps": 0,
+                            "distance": 0,
+                            "completed": false
+                        }
+                    ],
                     "status": "SCHEDULED",
                     "schedule": "2020-01-20T09:37:20.000Z",
                     "createdAt": "2020-01-20T09:35:52.359Z"
