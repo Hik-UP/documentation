@@ -7,4 +7,4 @@ Hike
 
    join
    move
-   disconnect
+   leave
