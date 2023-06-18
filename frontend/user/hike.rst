@@ -19,7 +19,7 @@ The user can  see in the section "Mes randonnées" the hike that he creates.
 
 ..  image:: hike.png
 
-If the user click on the artcile , he arrives on the web pages.
+If the user click on the article , he arrives on the web pages.
 
 ..  image:: invite.png
 
