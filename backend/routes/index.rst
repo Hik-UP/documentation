@@ -9,3 +9,4 @@ Routes
    skin/index
    trail/index
    user/index
+   event/index
