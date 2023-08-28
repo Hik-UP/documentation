@@ -8,4 +8,5 @@ Trail
    comment/index
    create
    retrieve
+   update
    details
